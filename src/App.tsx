@@ -12,6 +12,7 @@ function App() {
         <>
             <div>
                 <h1>Hello, Telegram Mini App!</h1>
+                <h1>{WebApp.initData}</h1>
                 <button onClick={() => WebApp.close()}>Close App</button>
             </div>
         </>
