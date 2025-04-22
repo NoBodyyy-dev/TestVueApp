@@ -18,7 +18,7 @@ const userSlice = createSlice({
             console.log(action.payload)
         }).addCase(Login.fulfilled, (state, action) => {
             state.load = false
-            state.initData = action.payload.userData
+            state.initData = action.payload.userD
         })
     },
 });
