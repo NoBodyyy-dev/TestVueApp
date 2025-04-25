@@ -1,5 +1,5 @@
 import './App.css';
-import WebApp from '@twa-dev/sdk';
+// import WebApp from '@twa-dev/sdk';
 import io from 'socket.io-client';
 import {useEffect, useState} from "react";
 import Socket = SocketIOClient.Socket;
