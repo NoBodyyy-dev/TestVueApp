@@ -10,6 +10,7 @@ function App() {
     const [haha, setHaha] = useState<string[]>([])
 
     useEffect(() => {
+        if (WebApp.initData) {
             const socket: Socket = io("https://api.mygifts.pw", {
                 auth: {
                     initData: localStorage.getItem("token"),
@@ -26,8 +27,9 @@ function App() {
             });
             return () => {
                 socket.disconnect()
+            }
         }
-    }, [])
+    }, [WebApp.initData])
 
     return (
         <div className="app-container">
