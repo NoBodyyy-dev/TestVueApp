@@ -13,7 +13,7 @@ function App() {
         if (WebApp.initData) {
             const socket: Socket = io("https://api.mygifts.pw", {
                 auth: {
-                    initData: localStorage.getItem("token"),
+                    initData: WebApp.initData,
                 },
                 path: "/ws"
             });
@@ -34,7 +34,7 @@ function App() {
     return (
         <div className="app-container">
             <pre>
-            {/*{WebApp.initData}*/}
+            {WebApp.initData}
                 {cnt}
                 {haha.map((item: string, index: number) => {
                     return <p key={index}>{item}</p>
